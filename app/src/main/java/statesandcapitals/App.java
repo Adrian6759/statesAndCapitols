@@ -3,12 +3,18 @@
  */
 package statesandcapitals;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    ArrayList<Integer> list = new ArrayList<>();
+//    StatesAndCapitals test1 = new StatesAndCapitals();
+    public static void main(String[] args)  {
         System.out.println(new App().getGreeting());
+
     }
 }
