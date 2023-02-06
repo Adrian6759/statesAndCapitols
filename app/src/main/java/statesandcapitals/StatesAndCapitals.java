@@ -107,7 +107,7 @@ public class StatesAndCapitals
 
 
         StateInfo cardinalState =
-                states.stream().filter(Stateinfo -> Stateinfo.getStateBird() == "cardinal").findFirst().orElse(null);
+                states.stream().filter(Stateinfo -> Stateinfo.getStateBird().equals("cardinal")).findFirst().orElse(null);
         System.out.println(cardinalState);
         testResults.put("I1", StatesAndCapitalsCheck.int1(cardinalState));
 
@@ -208,8 +208,9 @@ public class StatesAndCapitals
         // A24. Submit all distinct state birds, but with any kind of mockingbird removed
         // Use distinct(), map(), and filter()
 
-        List<String> allDistinctStateBirdsMinusMockingbirds = states.stream().map(stateInfo -> stateInfo.getStateBird()).distinct().collect(toList());
-
+        List<String> allDistinctStateBirdsMinusMockingbirds = null;
+//                states.stream().map.filter(stateInfo -> stateInfo.getStateBird().equals("mockingbird")).distinct().collect(toList());
+//        states.stream().filter(Stateinfo -> Stateinfo.getStateBird().equals("cardinal")).findFirst().orElse(null);
         testResults.put("A24", StatesAndCapitalsCheck.adv24(allDistinctStateBirdsMinusMockingbirds));
 
         // A25. Submit the number of distinct state birds
